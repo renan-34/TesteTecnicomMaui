@@ -1,0 +1,24 @@
+﻿# Ignorar pastas de configuração do Visual Studio
+.vs/
+
+# Ignorar pastas de build
+bin/
+obj/
+
+# Ignorar arquivos temporários
+*.log
+*.tmp
+
+
+# Ignorar Visual Studio
+.vs/
+.vscode/
+bin/
+obj/
+*.log
+*.tmp
+
+# Ignorar diretórios temporários do Visual Studio
+.vs/
+bin/
+obj/

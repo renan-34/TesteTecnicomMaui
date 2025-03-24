@@ -39,7 +39,7 @@ namespace testeTecnicoCOmMaui
                     lblFibonacci.TextColor = Colors.Red;
                 }
             }
-           
+
         }
 
         private bool EhFibonacci(int num)
@@ -92,6 +92,41 @@ namespace testeTecnicoCOmMaui
 
             return new string(invertido);
         }
+
+
+
+        private void OnCalcularPercentualClicked(object sender, EventArgs e)
+        {
+            var faturamentoEstados = new List<(string Estado, double Faturamento)>
+            {
+                ("SP", 67836.43),
+                ("RJ", 36678.66),
+                ("MG", 29229.88),
+                ("ES", 27165.48),
+                ("Outros", 19849.53)
+            };
+
+            // Calculando o total de faturamento
+            double totalFaturamento = 0;
+            foreach (var estado in faturamentoEstados)
+            {
+                totalFaturamento += estado.Faturamento;
+            }
+
+            // Calculando o percentual de cada estado
+            lblFaturamentoSP.Text = $"SP: {CalcularPercentual(faturamentoEstados[0].Faturamento, totalFaturamento)}%";
+            lblFaturamentoRJ.Text = $"RJ: {CalcularPercentual(faturamentoEstados[1].Faturamento, totalFaturamento)}%";
+            lblFaturamentoMG.Text = $"MG: {CalcularPercentual(faturamentoEstados[2].Faturamento, totalFaturamento)}%";
+            lblFaturamentoES.Text = $"ES: {CalcularPercentual(faturamentoEstados[3].Faturamento, totalFaturamento)}%";
+            lblFaturamentoOutros.Text = $"Outros: {CalcularPercentual(faturamentoEstados[4].Faturamento, totalFaturamento)}%";
+        }
+
+        private string CalcularPercentual(double faturamento, double totalFaturamento)
+        {
+            double percentual = (faturamento / totalFaturamento) * 100;
+            return percentual.ToString("F2");
+        }
+
 
         private void OnInverterTextoClicked(object sender, EventArgs e)
         {

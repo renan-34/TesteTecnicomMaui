@@ -2,107 +2,145 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:testeTecnicoCOmMaui"
-             x:Class="testeTecnicoCOmMaui.MainPage">
+             x:Class="testeTecnicoCOmMaui.MainPage"
+             BackgroundColor="LightGray">
 
-    <VerticalStackLayout Padding="20" Spacing="20">
+    <!-- Adicionando ScrollView para tornar o conteúdo rolável -->
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
 
-        <!-- Questão 1 -->
-        <Label Text="Questão 1 do teste.Cálculo de Soma"
-               FontSize="24"
-               HorizontalOptions="Center"
-               TextColor="Black"/>
+            <!-- Questão 1 -->
+            <Label Text="Questão 1 do teste.Cálculo de Soma"
+                   FontSize="24"
+                   HorizontalOptions="Center"
+                   TextColor="Black"/>
 
-        <Button Text="Calcular Soma"
-                Clicked="OnCalcularClicked"
-                BackgroundColor="DodgerBlue"
-                TextColor="White"
-                CornerRadius="10"
-                FontSize="18"/>
+            <Button Text="Calcular Soma"
+                    Clicked="OnCalcularClicked"
+                    BackgroundColor="Green"
+                    TextColor="White"
+                    CornerRadius="10"
+                    FontSize="18"/>
 
-        <Label x:Name="lblResultado"
-               FontSize="20"
-               HorizontalOptions="Center"
-               TextColor="Black"/>
+            <Label x:Name="lblResultado"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   TextColor="Black"/>
 
-        <BoxView HeightRequest="2" BackgroundColor="Gray"/>
+            <BoxView HeightRequest="2" BackgroundColor="Gray"/>
 
-        <!-- Questão 2 -->
-        <Label Text="Questão 2 do teste .Verificar Fibonacci"
-               FontSize="24"
-               HorizontalOptions="Center"
-               TextColor="Black"/>
+            <!-- Questão 2 -->
+            <Label Text="Questão 2 do teste .Verificar Fibonacci"
+                   FontSize="24"
+                   HorizontalOptions="Center"
+                   TextColor="Black"/>
 
-        <Entry x:Name="txtNumero"
-               Placeholder="Digite um número"
-               Keyboard="Numeric"
-               FontSize="18"
-               HorizontalOptions="Fill"/>
+            <Entry x:Name="txtNumero"
+                   Placeholder="Digite um número"
+                   Keyboard="Numeric"
+                   FontSize="18"
+                   HorizontalOptions="Fill"/>
 
-        <Button Text="Verificar Fibonacci"
-                Clicked="OnVerificarFibonacciClicked"
-                BackgroundColor="ForestGreen"
-                TextColor="White"
-                CornerRadius="10"
-                FontSize="18"/>
+            <Button Text="Verificar Fibonacci"
+                    Clicked="OnVerificarFibonacciClicked"
+                    BackgroundColor="Green"
+                    TextColor="White"
+                    CornerRadius="10"
+                    FontSize="18"/>
 
-        <Label x:Name="lblFibonacci"
-               FontSize="20"
-               HorizontalOptions="Center"
-               TextColor="Black"/>
+            <Label x:Name="lblFibonacci"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   TextColor="Black"/>
 
-        <BoxView HeightRequest="2" BackgroundColor="Gray"/>
+            <BoxView HeightRequest="2" BackgroundColor="Gray"/>
 
-        <!-- Questão 3 -->
-        <Label Text="Questão 3 do teste. Cálculo do Faturamento"
-               FontSize="24"
-               HorizontalOptions="Center"
-               TextColor="Black"/>
+            <!-- Questão 3 -->
+            <Label Text="Questão 3 do teste. Cálculo do Faturamento"
+                   FontSize="24"
+                   HorizontalOptions="Center"
+                   TextColor="Black"/>
 
-        <Button Text="Calcular Faturamento"
-                Clicked="OnCalcularFaturamentoClicked"
-                BackgroundColor="Orange"
-                TextColor="White"
-                CornerRadius="10"
-                FontSize="18"/>
+            <Button Text="Calcular Faturamento"
+                    Clicked="OnCalcularFaturamentoClicked"
+                    BackgroundColor="Green"
+                    TextColor="White"
+                    CornerRadius="10"
+                    FontSize="18"/>
 
-        <Label x:Name="lblFaturamentoMenor"
-               FontSize="20"
-               HorizontalOptions="Center"
-               TextColor="Black"/>
+            <Label x:Name="lblFaturamentoMenor"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   TextColor="Black"/>
 
-        <Label x:Name="lblFaturamentoMaior"
-               FontSize="20"
-               HorizontalOptions="Center"
-               TextColor="Black"/>
+            <Label x:Name="lblFaturamentoMaior"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   TextColor="Black"/>
 
-        <Label x:Name="lblDiasAcimaMedia"
-               FontSize="20"
-               HorizontalOptions="Center"
-               TextColor="Black"/>
+            <Label x:Name="lblDiasAcimaMedia"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   TextColor="Black"/>
 
-        <!-- Questão 4 - Inverter String -->
-        <Label Text="Questão 4: Inverter String"
-               FontSize="24"
-               HorizontalOptions="Center"
-               TextColor="Black"/>
+            <!-- Questão 4 - Inverter String -->
+            <Label Text="Questão 4: Inverter String"
+                   FontSize="24"
+                   HorizontalOptions="Center"
+                   TextColor="Black"/>
 
-        <Entry x:Name="txtTexto"
-               Placeholder="Digite o texto"
-               FontSize="18"
-               HorizontalOptions="Fill"/>
+            <Entry x:Name="txtTexto"
+                   Placeholder="Digite o texto"
+                   FontSize="18"
+                   HorizontalOptions="Fill"/>
 
-        <Button Text="Inverter Texto"
-                Clicked="OnInverterTextoClicked"
-                BackgroundColor="Purple"
-                TextColor="White"
-                CornerRadius="10"
-                FontSize="18"/>
+            <Button Text="Inverter Texto"
+                    Clicked="OnInverterTextoClicked"
+                    BackgroundColor="Green"
+                    TextColor="White"
+                    CornerRadius="10"
+                    FontSize="18"/>
 
-        <Label x:Name="lblTextoInvertido"
-               FontSize="20"
-               HorizontalOptions="Center"
-               TextColor="Black"/>
+            <Label x:Name="lblTextoInvertido"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   TextColor="Black"/>
 
-    </VerticalStackLayout>
+            <!-- Labels para exibir os percentuais de faturamento -->
+            <Label x:Name="lblFaturamentoSP"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   TextColor="Black"/>
+
+            <Label x:Name="lblFaturamentoRJ"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   TextColor="Black"/>
+
+            <Label x:Name="lblFaturamentoMG"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   TextColor="Black"/>
+
+            <Label x:Name="lblFaturamentoES"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   TextColor="Black"/>
+
+            <Label x:Name="lblFaturamentoOutros"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   TextColor="Black"/>
+
+            <!-- Botão para calcular percentuais de faturamento -->
+            <Button Text="Calcular Percentual de Faturamento. Questão 5"
+                    Clicked="OnCalcularPercentualClicked"
+                    BackgroundColor="Green"
+                    TextColor="White"
+                    CornerRadius="10"
+                    FontSize="18"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
 
 </ContentPage>

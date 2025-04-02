@@ -19,9 +19,9 @@ namespace testeTecnicoCOmMaui
                 // Lendo o JSON do arquivo
                 string jsonContent = File.ReadAllText(caminhoArquivo);
 
-                Console.WriteLine("JSON Lido: " + jsonContent); // Verifica o conteúdo do JSON
+                Console.WriteLine("JSON Lido: " + jsonContent); 
 
-                // Desserializando o JSON corretamente
+                // Desserializando o JSON
                 List<FaturamentoDia> faturamentos = JsonSerializer.Deserialize<List<FaturamentoDia>>(jsonContent,
                     new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
@@ -31,7 +31,7 @@ namespace testeTecnicoCOmMaui
                 foreach (var faturamento in faturamentos)
                 {
                     if (faturamento.Valor > 0)
-                    {
+                    {                                     
                         diasUteis.Add(faturamento);
                     }
                 }

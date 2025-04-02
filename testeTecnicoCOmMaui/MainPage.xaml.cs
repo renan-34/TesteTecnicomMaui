@@ -59,7 +59,7 @@ namespace testeTecnicoCOmMaui
         // Função para calcular o faturamento
         private async void OnCalcularFaturamentoClicked(object sender, EventArgs e)
         {
-            // Caminho do arquivo JSON (ajuste conforme necessário)
+            // Caminho do arquivo JSON 
             string jsonFilePath = @"C:\Users\R\source\repos\testeTecnicoCOmMaui\dados.json";
 
             // Verificando se o arquivo existe
@@ -68,7 +68,7 @@ namespace testeTecnicoCOmMaui
                 // Chamando a função de processamento de faturamento
                 var resultado = Faturamento.ProcessarFaturamento(jsonFilePath);
 
-                // Exibindo os resultados
+                
                 lblFaturamentoMenor.Text = $"Menor valor de faturamento: {resultado.menor:C}";
                 lblFaturamentoMaior.Text = $"Maior valor de faturamento: {resultado.maior:C}";
                 lblDiasAcimaMedia.Text = $"Dias acima da média: {resultado.diasAcimaMedia}";
